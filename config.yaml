@@ -1,0 +1,71 @@
+bit_depth: 24
+checkpoints:
+  crepe: full
+  demucs: htdemucs
+  hubert: facebook/hubert-base-ls960
+  seed_vc:
+    cello: ''
+    flute: ''
+    guitar: checkpoints/seed_vc_guitar.pt
+    piano: ''
+    synth: ''
+    trumpet: ''
+    violin: checkpoints/seed_vc_violin.pt
+ddim_steps: 50
+ingestion_lufs: -23.0
+instruments:
+  cello:
+    compression_ratio: 3.5
+    eq_high_shelf_hz: 7000
+    eq_low_shelf_hz: 60
+    reference: instruments/cello/reference.wav
+    reverb_ir: reverb/concert_hall.wav
+  flute:
+    compression_ratio: 3.0
+    eq_high_shelf_hz: 12000
+    eq_low_shelf_hz: 250
+    reference: instruments/flute/reference.wav
+    reverb_ir: reverb/chamber.wav
+  guitar:
+    compression_ratio: 4.0
+    eq_high_shelf_hz: 9000
+    eq_low_shelf_hz: 80
+    reference: instruments/guitar/reference.wav
+    reverb_ir: reverb/studio.wav
+  piano:
+    compression_ratio: 4.0
+    eq_high_shelf_hz: 10000
+    eq_low_shelf_hz: 80
+    reference: instruments/piano/reference.wav
+    reverb_ir: reverb/studio.wav
+  synth:
+    compression_ratio: 3.5
+    eq_high_shelf_hz: 14000
+    eq_low_shelf_hz: 100
+    reference: instruments/synth/reference.wav
+    reverb_ir: ''
+  violin:
+    compression_ratio: 3.0
+    eq_high_shelf_hz: 8000
+    eq_low_shelf_hz: 200
+    reference: instruments/violin/reference.wav
+    reverb_ir: reverb/concert_hall.wav
+quality_thresholds:
+  layer1_sdr: 7.0
+  layer2_crepe_confidence: 0.55
+  layer2_f0_jump_max_cents: 50
+  layer3_embedding_norm_min: 0.1
+  layer4_f0_correlation: 0.8
+  layer4_snr: 25.0
+  layer5_spectral_centroid_error_hz: 500
+  layer6_lufs_tolerance: 0.5
+sample_rate: 44100
+seedvc_centroid_fallback_hz: 1000.0
+target_lufs: -14.0
+true_peak_dbtp: -1.0
+trumpet:
+  compression_ratio: 3.0
+  eq_high_shelf_hz: 10000
+  eq_low_shelf_hz: 150
+  reference: instruments/trumpet/reference.wav
+  reverb_ir: reverb/concert_hall.wav
