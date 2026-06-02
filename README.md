@@ -15,9 +15,3 @@ Soniq is an AI-powered voice synthesis and voice conversion project that generat
 - Seed-VC
 - BigVGAN
 - WORLD Vocoder
-
-## How to Run
-
-```bash
-pip install -r requirements.txt
-python synthesiser.py
